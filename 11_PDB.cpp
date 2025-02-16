@@ -14,11 +14,10 @@
 #include "Algorithms/IDAStar.hpp"
 
 
-//g++ -Ofast -fopenmp 8_PDB.cpp Algorithms/IDAStar.cpp Heuristics/Heuristics.cpp Heuristics/PDB.cpp Algorithms/SearchNode.cpp Algorithms/AStar.cpp Utils/IndexFunctions.cpp Utils/MovementsHandler.cpp puzzle_n_minus_1.cpp PDBAbstractedPuzzle.cpp -o 8_PDB.x
+//g++ -Ofast -fopenmp 11_PDB.cpp Algorithms/IDAStar.cpp Heuristics/Heuristics.cpp Heuristics/PDB.cpp Algorithms/SearchNode.cpp Algorithms/AStar.cpp Utils/IndexFunctions.cpp Utils/MovementsHandler.cpp puzzle_n_minus_1.cpp PDBAbstractedPuzzle.cpp -o 8_PDB.x
 
 
-
-const size_t N_RANDOM_INSTANCES = 3500;
+const size_t N_RANDOM_INSTANCES = 1000;
 const int rows = 3;
 const int columns = 4;
 const int N_RANDOM_MOVES = 1000;

@@ -17,7 +17,7 @@
 //g++ -Ofast -fopenmp 15_PDB.cpp Algorithms/IDAStar.cpp Heuristics/Heuristics.cpp Heuristics/PDB.cpp Heuristics/Manhattan.cpp Heuristics/MisplacedTileCount.cpp Heuristics/Zero.cpp Algorithms/SearchNode.cpp Algorithms/AStar.cpp Utils/IndexFunctions.cpp Utils/MovementsHandler.cpp puzzle_n_minus_1.cpp PDBAbstractedPuzzle.cpp -o 15_PDB.x
 
 
-const size_t N_RANDOM_INSTANCES = 1000;
+const size_t N_RANDOM_INSTANCES = 200;
 const int rows = 4;
 const int columns = 4;
 const int N_RANDOM_MOVES = 1000;
@@ -44,17 +44,17 @@ int main (int argc, char **argv){
 
     // saida em linha separado por espaços, uma linha para cada execucao
     // <iteracao> <runtime> <estados gerados> <heuristica media> <sol_size> 
-    // for (size_t i = 0; i < N_RANDOM_INSTANCES; i++){
-    //     AStar *a = new AStar();
-    //     initial_state = getRandomPuzzleInstance();
-    //     std::cout << i << " ";
-    //     auto result = a->solve(initial_state, goal_state, pdb);
-    //     std::cout << " " << result.size();
-    //     std::cout << std::endl;
-    //     delete a;
-    // }
+    for (size_t i = 0; i < N_RANDOM_INSTANCES; i++){
+        AStar *a = new AStar();
+        initial_state = getRandomPuzzleInstance();
+        std::cout << i << " ";
+        auto result = a->solve(initial_state, goal_state, pdb);
+        std::cout << " " << result.size();
+        std::cout << std::endl;
+        delete a;
+    }
 
-    // std::cout << "-" << std::endl;
+    std::cout << "-" << std::endl;
     srand(seed_value);
 
     for (size_t i = 0; i < N_RANDOM_INSTANCES; i++){
