@@ -17,7 +17,7 @@
 
 //time ./15_APDB_SAMPLING.x > 15_APDB_SAMPLING.txt
 
-const size_t N_RANDOM_INSTANCES = 50000000;
+const size_t N_RANDOM_INSTANCES = 10000000;
 const int rows = 4;
 const int columns = 4;
 const int N_RANDOM_MOVES = 1000;

@@ -16,7 +16,7 @@
 //g++ -Ofast -fopenmp 15_PDB_SAMPLING.cpp Heuristics.cpp PDB.cpp  ../Utils/IndexFunctions.cpp ../Utils/MovementsHandler.cpp ../puzzle_n_minus_1.cpp ../PDBAbstractedPuzzle.cpp -o 15_PDB_SAMPLING.x
 //time ./15_PDB_SAMPLING.x > 15_PDB_SAMPLING.txt
 
-const size_t N_RANDOM_INSTANCES = 100000000;
+const size_t N_RANDOM_INSTANCES = 5000000;
 const int rows = 4;
 const int columns = 4;
 const int N_RANDOM_MOVES = 1000;
@@ -43,7 +43,7 @@ int main (int argc, char **argv){
 
     for (size_t i = 0; i < N_RANDOM_INSTANCES; i++){
         initial_state = getRandomPuzzleInstance();
-        std::cout << i << "\n";
+        std::cout << pdb->evaluate(initial_state) << "\n";
     }
 
     delete pdb;
