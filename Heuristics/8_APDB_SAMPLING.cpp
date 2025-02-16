@@ -19,7 +19,7 @@
 
 const size_t N_RANDOM_INSTANCES = 50000;
 const int rows = 3;
-const int columns = 4;
+const int columns = 3;
 const int N_RANDOM_MOVES = 1000;
 const int seed_value = 42;
 
