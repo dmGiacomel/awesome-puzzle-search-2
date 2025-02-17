@@ -13,11 +13,11 @@
 // #include "Algorithms/AStar.hpp"
 // #include "Algorithms/IDAStar.hpp"
 
-//g++ -Ofast -fopenmp 11_APDB_SAMPLING.cpp Heuristics.cpp APDBSet.cpp AdditivePDB.cpp ../Utils/IndexFunctions.cpp ../Utils/MovementsHandler.cpp ../puzzle_n_minus_1.cpp ../APDBAbstractedPuzzle.cpp -o 11_APDB_SAMPLING.x
+//g++ -Ofast -fopenmp 11_APDB_SAMPLING.cpp Heuristics.cpp APDBSet.cpp AdditivePDB.cpp ../Utils/IndexFunctions.cpp ../Utils/MovementsHandler.cpp ../puzzle_n_minus_1.cpp ../APDBAbstractedPuzzle.cpp ../zero_tile_region_mapping.cpp -o 11_APDB_SAMPLING.x
 
 //time ./11_APDB_SAMPLING.x > 11_APDB_SAMPLING.txt
 
-const size_t N_RANDOM_INSTANCES = 5000000;
+const size_t N_RANDOM_INSTANCES = 1000000;
 const int rows = 3;
 const int columns = 4;
 const int N_RANDOM_MOVES = 1000;
@@ -40,7 +40,7 @@ int main (int argc, char **argv){
     srand(seed_value);
 
     APDBSet *apdb = new APDBSet();
-    apdb->build(initial_state, goal_state, {{1,4,5,8}, {3,7,11,12,13,14,15}, {2,6,9,10}});
+    apdb->build(initial_state, goal_state, {{5, 6}, {1, 2, 3, 4, 7, 8, 9, 10, 11}});
 
     for (size_t i = 0; i < N_RANDOM_INSTANCES; i++){
         initial_state = getRandomPuzzleInstance();

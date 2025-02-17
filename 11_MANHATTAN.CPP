@@ -13,6 +13,9 @@
 #include "Algorithms/AStar.hpp"
 #include "Algorithms/IDAStar.hpp"
 
+
+// g++ -Ofast -fopenmp 15_MANHATTAN.cpp Algorithms/IDAStar.cpp Heuristics/Heuristics.cpp Heuristics/PDB.cpp Algorithms/SearchNode.cpp Algorithms/AStar.cpp Utils/IndexFunctions.cpp Utils/MovementsHandler.cpp puzzle_n_minus_1.cpp PDBAbstractedPuzzle.cpp -o 15_MANHATTAN.x
+
 const size_t N_RANDOM_INSTANCES = 1000;
 const int rows = 3;
 const int columns = 4;
